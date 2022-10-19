@@ -16,6 +16,8 @@
 		AA1623C828FFCE73001DED6B /* TrackMySpendingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1623C728FFCE73001DED6B /* TrackMySpendingUITestsLaunchTests.swift */; };
 		AA1623D828FFD123001DED6B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1623D728FFD123001DED6B /* Extensions.swift */; };
 		AA1623DA28FFEDD2001DED6B /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1623D928FFEDD2001DED6B /* TransactionModel.swift */; };
+		AA1623DC29003567001DED6B /* previewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1623DB29003567001DED6B /* previewData.swift */; };
+		AA1623DE2900377A001DED6B /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1623DD2900377A001DED6B /* TransactionRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		AA1623C728FFCE73001DED6B /* TrackMySpendingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackMySpendingUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AA1623D728FFD123001DED6B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		AA1623D928FFEDD2001DED6B /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
+		AA1623DB29003567001DED6B /* previewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = previewData.swift; sourceTree = "<group>"; };
+		AA1623DD2900377A001DED6B /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 				AA1623D928FFEDD2001DED6B /* TransactionModel.swift */,
 				AA1623AE28FFCE72001DED6B /* Assets.xcassets */,
 				AA1623B028FFCE73001DED6B /* Preview Content */,
+				AA1623DD2900377A001DED6B /* TransactionRow.swift */,
 			);
 			path = TrackMySpending;
 			sourceTree = "<group>";
@@ -112,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				AA1623B128FFCE73001DED6B /* Preview Assets.xcassets */,
+				AA1623DB29003567001DED6B /* previewData.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -263,8 +269,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA1623DC29003567001DED6B /* previewData.swift in Sources */,
 				AA1623DA28FFEDD2001DED6B /* TransactionModel.swift in Sources */,
 				AA1623AD28FFCE70001DED6B /* ContentView.swift in Sources */,
+				AA1623DE2900377A001DED6B /* TransactionRow.swift in Sources */,
 				AA1623D828FFD123001DED6B /* Extensions.swift in Sources */,
 				AA1623AB28FFCE70001DED6B /* TrackMySpendingApp.swift in Sources */,
 			);
