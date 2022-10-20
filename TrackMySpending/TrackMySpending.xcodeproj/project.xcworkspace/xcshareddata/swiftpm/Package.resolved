@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SwiftUIFontIcon",
+        "repositoryURL": "https://github.com/huybuidac/SwiftUIFontIcon.git",
+        "state": {
+          "branch": null,
+          "revision": "4f170fbf443d985ae518a14a12ec8194ec6b08eb",
+          "version": "2.1.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
