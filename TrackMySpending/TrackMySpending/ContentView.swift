@@ -9,9 +9,12 @@ import SwiftUI
 import SwiftUICharts
 
 struct ContentView: View {
+    
+    @EnvironmentObject var transactionListVM: TransactionListViewModel
+    
     var body: some View {
         
-        var demoData: [Double] = [8, 2, 4, 6, 12, 9, 2]
+        // let demoData: [Double] = [8, 2, 4, 6, 12, 9, 2]
         
         NavigationView {
             ScrollView {
@@ -22,16 +25,25 @@ struct ContentView: View {
                         .bold()
                     
                     // MARK: charts
-                    CardView {
-                        VStack {
-                            ChartLabel("$900", type: .title)
-                            LineChart()
+                    
+                    let data = transactionListVM.accumulateTransaction()
+                    
+                    if !data.isEmpty {
+                        let totalExpenses = data.last?.1 ?? 0
+                        CardView {
+                            VStack(alignment: .leading) {
+                                ChartLabel(totalExpenses.formatted(.currency(code: "USD")),
+                                           type: .title, format: "$%.02f")
+                                LineChart()
+                            }
+                            .background(Color.systemBackground)
                         }
-                        .background(Color.systemBackground)
+                        .data(data)
+                        .chartStyle(ChartStyle(backgroundColor: Color.systemBackground,
+                                               foregroundColor: ColorGradient(Color.icon.opacity(0.4),
+                                                                              Color.icon)))
+                        .frame(height: 300)
                     }
-                    .data(demoData)
-                    .chartStyle(ChartStyle(backgroundColor: Color.systemBackground, foregroundColor: ColorGradient(Color.icon.opacity(0.4), Color.icon)))
-                    .frame(height: 300)
                     
                     
                     // MARK: transaction list

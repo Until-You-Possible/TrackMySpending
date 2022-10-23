@@ -20,6 +20,7 @@ extension Color {
 
 
 extension DateFormatter {
+    
     static let allNumericUSA: DateFormatter = {
         print("Initalizing DateFormatter")
         let formatter = DateFormatter()
@@ -34,4 +35,12 @@ extension String {
         guard let paraseDate = DateFormatter.allNumericUSA.date(from: self) else { return Date() }
         return paraseDate
     }
+}
+
+extension Date: Strideable {
+    
+    func formatted() -> String {
+        return self.formatted(.dateTime.year().month().day())
+    }
+    
 }
